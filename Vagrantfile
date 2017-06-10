@@ -20,7 +20,7 @@ Vagrant.configure(2) do |config|
     config.vm.provider "virtualbox" do |v|
       v.name = 'vagrant-base-wheezy'
     end
-    wheezy.vm.box = 'debian/wheezy64'
+    wheezy.vm.box = 'sagepe/wheezy'
     wheezy.vm.hostname = 'wheezy'
   end
   config.vm.define "jessie", autostart: false do |jessie|
@@ -28,7 +28,7 @@ Vagrant.configure(2) do |config|
     config.vm.provider "virtualbox" do |v|
       v.name = 'vagrant-base-jessie'
     end
-    jessie.vm.box = 'debian/jessie64'
+    jessie.vm.box = 'sagepe/jessie'
     jessie.vm.hostname = 'jessie'
   end
   config.vm.define "centos6", autostart: false do |centos6|
@@ -44,7 +44,7 @@ Vagrant.configure(2) do |config|
     config.vm.provider "virtualbox" do |v|
       v.name = 'vagrant-base-centos7'
     end
-    centos7.vm.box = 'centos/7'
+    centos7.vm.box = 'sagepe/centos7'
     centos7.vm.hostname = 'centos7'
   end
 end
